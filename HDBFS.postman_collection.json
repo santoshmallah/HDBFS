@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "238bbd69-5c10-4a9d-861e-8e1236828ff8",
+		"name": "HDBFS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14423028"
+	},
+	"item": [
+		{
+			"name": "JWT LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"santoshm@gmail.com\",\r\n    \"password\":\"santosh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/auth/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"santoshm@gmail.com\",\r\n    \"password\":\"santosh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 09:16:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"santoshm@gmail.com\",\n    \"accessToken\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLHNhbnRvc2htQGdtYWlsLmNvbSIsImlzcyI6IkNvZGVKYXZhIiwidXNlcm5hbWUiOiJzYW50b3NobUBnbWFpbC5jb20iLCJyb2xlcyI6IltST0xFX0FETUlOXSIsImlhdCI6MTY1NTAyNTM4NCwiZXhwIjoxNjU1MTExNzg0fQ.oaaGtOeNcaBFpFdmpQE-GKl6Dgln4WYTjzMW7yBgTxRK5GpOhoNQRJ2eB4FwTZnT3yrpvT6k-vilguWsTCJuyg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GENERATE PDF",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLHNhbnRAZ21haWwuY29tIiwiaXNzIjoiQ29kZUphdmEiLCJ1c2VybmFtZSI6InNhbnRAZ21haWwuY29tIiwicm9sZXMiOiJbUk9MRV9VU0VSXSIsImlhdCI6MTY1NTAyNDIyMSwiZXhwIjoxNjU1MTEwNjIxfQ.fbPx7HRsdvX4FXipv9SSOW5tLkmHJdTDRxxUbkAIo_vtnuGzZuv9IhTJWUVftdaxSwYS8CwCIvG1UaVbSpSp0g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getPdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getPdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"7\",\r\n    \"email\":\"hdbfs@gmail.com\",\r\n    \"password\":\"santosh\",\r\n    \"roles\":[\"ROLE_ADMIN\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createUsers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/createUsers",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"7\",\r\n    \"email\":\"hdbfs@gmail.com\",\r\n    \"password\":\"santosh\",\r\n    \"roles\":[\"ROLE_ADMIN\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createUsers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jun 2022 08:42:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"email\": \"hdbfs@gmail.com\",\n    \"message\": \"User Already Exist\"\n}"
+				}
+			]
+		}
+	]
+}
